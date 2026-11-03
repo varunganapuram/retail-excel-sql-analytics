@@ -4,6 +4,9 @@ import json
 import sqlite3
 import unittest
 from zipfile import ZipFile
+from io import BytesIO
+from tempfile import TemporaryDirectory
+from unittest.mock import patch
 import xml.etree.ElementTree as ET
 import numpy as np
 import pandas as pd
@@ -13,6 +16,15 @@ spec=importlib.util.spec_from_file_location('retail_pipeline',ROOT/'src/pipeline
 pipeline=importlib.util.module_from_spec(spec);spec.loader.exec_module(pipeline)
 
 class RetailTests(unittest.TestCase):
+    def test_download_creates_source_directory_on_fresh_checkout(self):
+        archive=BytesIO()
+        with ZipFile(archive,'w') as z:z.writestr('Online Retail.xlsx',b'isolated download fixture')
+        with TemporaryDirectory(dir=ROOT/'data/processed') as folder:
+            with patch.object(pipeline,'ROOT',Path(folder)),patch.object(pipeline,'urlopen',return_value=BytesIO(archive.getvalue())):
+                destination=pipeline.fetch()
+                self.assertEqual(destination.read_bytes(),b'isolated download fixture')
+                self.assertTrue(destination.parent.is_dir())
+
     def test_half_away_currency_rounding(self):
         for quantity,price,result in [(1,.005,1),(-1,.005,-1),(3,1.235,371),(-3,1.235,-371),(1,0,0)]:
             self.assertEqual(pipeline.money_cents(quantity,price),result)

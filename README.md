@@ -51,7 +51,7 @@ After changing source-table values in Excel, refresh both PivotTables. If new pe
 
 ## Verification and boundaries
 
-Nine automated tests pass. SQL/Python monetary totals reconcile to the penny, and 8,394 distinct quantity/price combinations are checked against Decimal rounding. The U-test implementation agrees with SciPy on 100 independently generated test cases including ties. The workbook's market filter, missing-market guard, customer lookup and customer-rule changes are recalculation-tested in artifact-tool. Cached formula results and both native PivotTable caches are checked after export. Microsoft Open XML SDK 3.3.0 reports zero validation errors.
+Ten automated tests pass. SQL/Python monetary totals reconcile to the penny, and 8,394 distinct quantity/price combinations are checked against Decimal rounding. The U-test implementation agrees with SciPy on 100 independently generated test cases including ties. The workbook's market filter, missing-market guard, customer lookup and customer-rule changes are recalculation-tested in artifact-tool. Cached formula results and both native PivotTable caches are checked after export. Microsoft Open XML SDK 3.3.0 reports zero validation errors.
 
 Native Excel screen capture/input automation was unavailable in this Windows session. A native Excel refresh and full click-through acceptance are therefore not claimed. This is separate from the successful calculation, saved-file, cache and Open XML checks.
 

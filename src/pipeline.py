@@ -39,6 +39,7 @@ def write_json(path,value):
 
 def fetch():
     path=ROOT/'data/raw/Online Retail.xlsx'
+    path.parent.mkdir(parents=True,exist_ok=True)
     if not path.exists():
         with urlopen('https://archive.ics.uci.edu/static/public/352/online+retail.zip',timeout=180) as response:
             data=response.read()
@@ -47,6 +48,8 @@ def fetch():
     return path
 
 def run():
+    for folder in ['data/processed','reports']:
+        (ROOT/folder).mkdir(parents=True,exist_ok=True)
     source=fetch()
     f=pd.read_excel(source,engine='openpyxl')
     assert list(f.columns)==['InvoiceNo','StockCode','Description','Quantity','InvoiceDate','UnitPrice','CustomerID','Country']
