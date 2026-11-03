@@ -1,0 +1,20 @@
+{
+  "question": "Do customer-level average positive invoice values differ between UK and non-UK customers?",
+  "sample_unit": "Customer, not invoice. Consistent-country customers with positive invoices only.",
+  "uk_customers": 3774,
+  "non_uk_customers": 392,
+  "uk_median_customer_aov_gbp": 286.9013888888889,
+  "non_uk_median_customer_aov_gbp": 430.3425,
+  "median_difference_gbp": 143.44111111111107,
+  "difference_95pct_customer_bootstrap_gbp": [
+    112.98131250000002,
+    181.6000124999999
+  ],
+  "mann_whitney_u": 1006940.5,
+  "p_value": 4.3727271453950333e-32,
+  "test_method": "Two-sided asymptotic Mann-Whitney U, average ranks, tie correction and continuity correction",
+  "probability_non_uk_aov_exceeds_uk": 0.680637457685777,
+  "resamples": 2000,
+  "seed": 42,
+  "interpretation": "Historical association. Markets, customer mix and wholesale behavior differ; this is not a causal country effect or a representative current-market experiment."
+}

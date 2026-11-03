@@ -1,0 +1,22 @@
+{
+  "engine": "artifact-tool",
+  "net_value": 8587247.02,
+  "germany_filter_value": 199330.67,
+  "germany_independent_value": 199330.67,
+  "blank_market_checked": true,
+  "unknown_market_checked": true,
+  "unknown_customer_checked": true,
+  "customer_rule_before": "Review for retention",
+  "customer_rule_after": "Monitor",
+  "reconciliations": [
+    "PASS",
+    "PASS",
+    "PASS",
+    "PASS",
+    "PASS",
+    "PASS",
+    "PASS",
+    "PASS"
+  ],
+  "formula_scan": "{\"kind\":\"notice\",\"message\":\"Cell search matched 0 entries.\"}"
+}

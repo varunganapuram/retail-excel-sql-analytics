@@ -1,0 +1,14 @@
+{
+  "verified_at": "2026-11-03T12:30:30.813725+00:00",
+  "unit_tests": 9,
+  "test_failures": 0,
+  "test_errors": 0,
+  "sql_python_reconciliation": "passed",
+  "decimal_pair_checks": 8394,
+  "independent_scipy_comparisons": 100,
+  "openxml_validation_errors": 0,
+  "native_pivot_tables": 2,
+  "native_pivot_cache_records": 407,
+  "workbook_sha256": "1e3dfcf6e4ad9cb82a79c1bd0ee067092506765781353cf8c324b98a4681f1bc",
+  "native_excel_ui_refresh": "not completed; Windows capture/input automation unavailable"
+}

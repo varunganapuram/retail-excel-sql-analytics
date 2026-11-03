@@ -1,0 +1,10 @@
+{
+  "status": "not completed",
+  "reason": "Windows native screenshot capture timed out and filename controls could not be addressed reliably; no native refresh claim",
+  "completed_independently": [
+    "Artifact-tool recalculation and control changes",
+    "Microsoft Open XML SDK structural validation",
+    "Native PivotTable definitions and cache reconciliation",
+    "openpyxl native-object load: two PivotTables and one chart"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "pivot_tables": 2,
+  "cache_records": 407,
+  "source_table": "RetailMonthlySource",
+  "names": [
+    "GrossByMarket",
+    "NetByMonth"
+  ],
+  "verification": "Open XML structure and cache reconciliation; native Excel refresh is checked separately"
+}

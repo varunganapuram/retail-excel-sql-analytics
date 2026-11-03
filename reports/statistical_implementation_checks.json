@@ -1,0 +1,8 @@
+{
+  "reference_engine": "SciPy mannwhitneyu, asymptotic, two-sided, continuity and tie correction",
+  "independent_generated_cases": 100,
+  "seed": 42,
+  "all_agreed": true,
+  "u_tolerance": 1e-10,
+  "p_value_tolerance": 1e-12
+}

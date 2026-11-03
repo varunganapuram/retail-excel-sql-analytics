@@ -1,0 +1,17 @@
+{
+  "source_rows": 541909,
+  "source_sha256": "43465a06f2ccf7c8b5bd2892bc7defb52f97487934fe93b16ae4c3936424676d",
+  "exact_duplicate_signatures": 5268,
+  "duplicate_policy": "Retained. No source line ID establishes that identical rows are erroneous duplicates.",
+  "reporting_start": "2011-01-01",
+  "reporting_end_exclusive": "2011-12-01",
+  "eligible_line_rows": 471713,
+  "outside_reporting_period": 68006,
+  "nonpositive_price_in_period": 2190,
+  "zero_quantity_in_period": 0,
+  "missing_customer_lines": 109432,
+  "precision_policy": "Round quantity x unit price to GBP pence per line, half away from zero. Preserve raw source.",
+  "cancellation_sign_anomalies": 0,
+  "decimal_pair_checks": 8394,
+  "sql_python_reconciliation": "passed"
+}
